@@ -7,6 +7,10 @@
 	<meta content="no-referrer" name="referrer" />
 	<meta content="Timothé Faudot" name="author" />
 	<meta content="3 months of something" name="description" />
+	<style>
+		.material-icons.md-18 { font-size: 18px; }
+		
+	</style>
 </head><!-- Fixed drawer. -->
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
 	<div class="mdl-layout__drawer">
@@ -14,69 +18,64 @@
 		<nav class="mdl-navigation">
 			<a class="mdl-navigation__link" href="/">Home</a>
 			<a class="mdl-navigation__link" href="/post/">Posts</a>
+			<a class="mdl-navigation__link" href="//github.com/attwad" target="_blank">
+				<i class="material-icons md-18">open_in_new</i>
+				<span>Github</span>
+			</a>
 		</nav>
 	</div>
 	<main class="mdl-layout__content">
 		<div class="page-content" style="margin: 50px;">			<!-- The content goes here in children templates. -->
 			<section>
-				<h1>All posts</h1>
-				<ul class="mdl-list">
-					<div class="mdl-card mdl-shadow--2dp" style="width: 90%;">
-						<div class="mdl-card__title">
-							<a href="https://attwad.github.io/post/first/">
-								<h2 class="mdl-card__title-text">Preparations...</h2>
-							</a>
-						</div>
-						<div class="mdl-card__supporting-text">
-							<time datetime="2017-06-03T22:24:14&#43;09:00">Jun 3, 2017</time>
-							<p>Preparing this website&hellip; stay tuned!</p>
-						</div>
-						<div class="mdl-card__actions mdl-card--border">
-							<span class="mdl-chip">
-								<span class="mdl-chip__text">dev</span>
+				<h4>All posts</h4>
+				<ul class="demo-list-three mdl-list">
+					<li class="mdl-list__item mdl-list__item--three-line">
+						<span class="mdl-list__item-primary-content">
+							<a href="https://attwad.github.io/post/first/">Preparations...</a>
+							<span class="mdl-list__item-secondary-info">
+								<time datetime="2017-06-03T22:24:14&#43;09:00">Jun 3, 2017</time>
 							</span>
-						</div>
-						<div class="mdl-card__menu">
+							<span class="mdl-list__item-text-body">Preparing this website&hellip; stay tuned!</span>
+						</span>
+						<span class="mdl-list__item-secondary-content">
 							<span class="material-icons mdl-badge mdl-badge--overlap" data-badge="1">access_time</span>
-						</div>
-					</div>
-					<br />
-					<div class="mdl-card mdl-shadow--2dp" style="width: 90%;">
-						<div class="mdl-card__title">
-							<a href="https://attwad.github.io/post/">
-								<h2 class="mdl-card__title-text">Posts</h2>
-							</a>
-						</div>
-						<div class="mdl-card__supporting-text">
-							<time datetime="2017-06-03T22:24:14&#43;09:00">Jun 3, 2017</time>
-							<p></p>
-						</div>
-						<div class="mdl-card__actions mdl-card--border">
-						</div>
-						<div class="mdl-card__menu">
+						</span>
+					</li>
+					<li class="mdl-list__item mdl-list__item--three-line">
+						<span class="mdl-list__item-primary-content">
+							<a href="https://attwad.github.io/post/">Posts</a>
+							<span class="mdl-list__item-secondary-info">
+								<time datetime="2017-06-03T22:24:14&#43;09:00">Jun 3, 2017</time>
+							</span>
+							<span class="mdl-list__item-text-body"></span>
+						</span>
+						<span class="mdl-list__item-secondary-content">
 							<span class="material-icons mdl-badge mdl-badge--overlap" data-badge="0">access_time</span>
-						</div>
-					</div>
-					<br />
+						</span>
+					</li>
 				</ul>
 			</section>
 		</div>		<!-- Footer. -->
 		<footer class="mdl-mini-footer">
 			<div class="mdl-mini-footer__left-section">
-				<div class="mdl-logo">
-					One dad army
-					<ul class="mdl-mini-footer__link-list">
-						<li>
-							<a href="/">Home</a>
-						</li>
-						<li>
-							<a href="/sitemap.xml">Sitemap</a>
-						</li>
-						<li>
-							<a href="//github.com/attwad" target="_blank">Github</a>
-						</li>
-					</ul>
-				</div>
+				<div class="mdl-logo">One dad army</div>
+				<ul class="mdl-mini-footer__link-list">
+					<li>
+						<a href="/">Home</a>
+					</li>
+					<li>
+						<a href="/sitemap.xml">Sitemap</a>
+					</li>
+					<li>
+						<a href="//github.com/attwad" target="_blank">
+							<i class="material-icons md-18">open_in_new</i>
+							<span>Github</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="mdl-mini-footer__right-section">
+				<span>© Timothé Faudot</span>
 			</div>
 		</footer>
 	</main>
