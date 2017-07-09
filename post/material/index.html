@@ -1,0 +1,166 @@
+<head>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link href="https://code.getmdl.io/1.3.0/material.amber-blue.min.css" rel="stylesheet" />
+	<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" type="text/css" />
+	<script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+	<title>(Minimalist) Material Design template for Hugo using Amber templates</title>
+	<meta content="no-referrer" name="referrer" />
+	<meta content="Timothé Faudot" name="author" />
+	<meta content="A few months of ..." name="description" />
+	<style>
+		.material-icons.md-18 { font-size: 18px; }
+		.profile-pic {
+			height: 100px;
+			padding-left: 15px;
+		}
+	</style>
+</head>
+<body>
+	<div class="mdl-layout mdl-js-layout">
+		<main class="mdl-layout__content">
+			<div class="page-content" style="margin: 50px;">				<!-- The content goes here in children templates. -->
+				<h1 style="font-weight: lighter">(Minimalist) Material Design template for Hugo using Amber templates</h1>
+				<section>
+					<div class="material-icons mdl-badge mdl-badge--overlap" data-badge="3">access_time</div>
+					<span>min. read</span>
+				</section>
+				<section style="padding-top:10px">
+					<span class="mdl-chip">
+						<span class="mdl-chip__text">Hugo</span>
+					</span>
+					<span class="mdl-chip">
+						<span class="mdl-chip__text">Google</span>
+					</span>
+					<span class="mdl-chip">
+						<span class="mdl-chip__text">dev</span>
+					</span>
+					<span class="mdl-chip">
+						<span class="mdl-chip__text">amber</span>
+					</span>
+					<span class="mdl-chip">
+						<span class="mdl-chip__text">templates</span>
+					</span>
+					<span class="mdl-chip">
+						<span class="mdl-chip__text">html</span>
+					</span>
+				</section>
+				<article>
+
+<h2 id="why-a-static-website">Why a static website?</h2>
+
+<p>When I decided to build this website, I knew I wanted to use a static website
+generator that I could put anywhere, preferably on <a href="https://pages.github.com/">Github pages</a> directly.</p>
+
+<p>A static website has a number of advantages over dynamic and self-hosted ones:</p>
+
+<ul>
+<li>They are blazingly fast</li>
+<li>They work well for blog-type websites</li>
+<li>They are more easily secured. Not that I really need it here but that&rsquo;s
+always something I&rsquo;ll take and care about.</li>
+<li>They can usually be written in markdown or other wiki-style scripts that I&rsquo;ve gotten quite used to at work thanks to writing abundant documentation.</li>
+</ul>
+
+<p>I remembered coming across <a href="https://gohugo.io/">Hugo</a> while looking at <a href="https://golang.org">Go</a> libraries online so I gave it a shot.</p>
+
+<p>I could have gone with a ready-made template (there are <a href="https://themes.gohugo.io">hundreds</a> of them), but the goal of this website is for me to build stuff.
+So I went on to the documentation and came across <a href="https://github.com/eknkc/amber">amber templates</a> which are one of the most <em>beautiful</em> thing I&rsquo;ve seen in a while.</p>
+
+<h2 id="amber-templates">Amber templates</h2>
+
+<p>They allow you to write html as it should have been from the start&hellip; They make html great and fun again, and that&rsquo;s no small deed.</p>
+
+<p>Take this simple blog article template in its entirety (at the time of writing this blog post of course):</p>
+
+<pre><code>extends ../partials/base.amber
+
+block content
+  section
+    div.material-icons.mdl-badge.mdl-badge--overlap[data-badge=ReadingTime] access_time
+    span min. read
+
+  section[style=&quot;padding-top:10px&quot;]
+    each $tag in Params.tags
+      span.mdl-chip
+        span.mdl-chip__text #{$tag}
+
+  article[style=&quot;padding-top:50px&quot;]
+    #{Content}
+
+</code></pre>
+
+<p>You can look at the <a href="https://github.com/attwad/oda-hugo-theme/blob/master/layouts/partials/base.amber">base.amber</a> template if you want but this snippet should be enough to convey the simplicity of the template engine syntax.</p>
+
+<p>Every tag gets closed automatically as per its indentation and content.</p>
+
+<p>You can assign attributes to tag in a map-assignment like syntax <code>[attr=&quot;value&quot;]</code>, set class names using a natural <em>dot</em> syntax <code>section.main-section</code> and access template rendering arguments using the <code>#{.}</code> syntax. This is simply grandiose and also apparently based on HAML and Jade which I didn&rsquo;t know about until now.</p>
+
+<p>It also solves an issue I had with the default Go templates for Hugo: the generated html is ugly as hell&hellip;. In fact I thought of making a plugin to prettify the output so that I could look at the generated source code of my website without having my eyes bleeding&hellip; The fact that Amber forces indentation of tags makes the generated html pretty by default so no need for a plugin, I can use my time for something else :-)</p>
+
+<h2 id="material-design">Material design</h2>
+
+<p>Google&rsquo;s <a href="https://getmdl.io">Material Design Lite</a> is a set of css and javascript files that</p>
+
+<blockquote>
+<p>lets you add a Material Design look and feel to your websites. It doesn’t rely on any JavaScript frameworks and aims to optimize for cross-device use, gracefully degrade in older browsers, and offer an experience that is immediately accessible.</p>
+</blockquote>
+
+<p>I couldn&rsquo;t easily find any theme with Material Design + Amber templates on the hugo themes list so I thought this would be a good learning experience. To use the material design library, just include the right css and javascript files in your templates header, for example this website uses:</p>
+
+<pre><code>head
+  link[rel=&quot;stylesheet&quot;][href=&quot;https://fonts.googleapis.com/icon?family=Material+Icons&quot;]
+  link[rel=&quot;stylesheet&quot;][href=&quot;https://code.getmdl.io/1.3.0/material.amber-blue.min.css&quot;]
+  link[rel=&quot;stylesheet&quot;]
+      [href=&quot;http://fonts.googleapis.com/css?family=Roboto:300,400,500,700&quot;]
+      [type=&quot;text/css&quot;]
+  script[src=&quot;https://code.getmdl.io/1.3.0/material.min.js&quot;]
+</code></pre>
+
+<h2 id="source">source</h2>
+
+<p>You can find the source of the theme I used for this website on <a href="https://github.com/attwad/oda-hugo-theme">Github</a>.</p>
+</article>
+			</div>			<!-- Footer. -->
+			<footer class="mdl-mini-footer">
+				<div class="mdl-mini-footer__left-section">
+					<div class="mdl-logo">One dad army ・ A few months of ...</div>
+					<ul class="mdl-mini-footer__link-list">
+						<li>
+							<a href="/">Home</a>
+						</li>
+						<li>
+							<a href="//github.com/attwad" target="_blank">
+								<span>Github</span>
+								<i class="material-icons md-18">code</i>
+							</a>
+						</li>
+						<li>
+							<a href="//tmumusic.bandcamp.com" target="_blank">
+								<span>Bandcamp</span>
+								<i class="material-icons md-18">music_note</i>
+							</a>
+						</li>
+						<li>
+							<a href="//www.linkedin.com/in/timothefaudot" target="_blank">
+								<span>Linkedin</span>
+								<i class="material-icons md-18">work</i>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="mdl-mini-footer__right-section">
+					<ul class="mdl-mini-footer__link-list">
+						<li>(ɔ) Timothé Faudot</li>
+						<li>
+							<a href="/sitemap.xml">Sitemap</a>
+						</li>
+						<li>
+							<a href="https://attwad.github.io/index.xml">RSS</a>
+						</li>
+					</ul>
+				</div>
+			</footer>
+		</main>
+	</div>
+</body>

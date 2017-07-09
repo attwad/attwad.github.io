@@ -6,77 +6,76 @@
 	<script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 	<meta content="no-referrer" name="referrer" />
 	<meta content="Timothé Faudot" name="author" />
-	<meta content="3 months of something" name="description" />
+	<meta content="A few months of ..." name="description" />
 	<style>
 		.material-icons.md-18 { font-size: 18px; }
-		
+		.profile-pic {
+			height: 100px;
+			padding-left: 15px;
+		}
 	</style>
-</head><!-- Fixed drawer. -->
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
-	<div class="mdl-layout__drawer">
-		<span class="mdl-layout-title">One dad army</span>
-		<nav class="mdl-navigation">
-			<a class="mdl-navigation__link" href="/">Home</a>
-			<a class="mdl-navigation__link" href="/post/">Posts</a>
-			<a class="mdl-navigation__link" href="//github.com/attwad" target="_blank">
-				<i class="material-icons md-18">open_in_new</i>
-				<span>Github</span>
-			</a>
-		</nav>
+</head>
+<body>
+	<div class="mdl-layout mdl-js-layout">
+		<main class="mdl-layout__content">
+			<div class="page-content" style="margin: 50px;">				<!-- The content goes here in children templates. -->
+				<section>
+					<h4>All posts</h4>
+					<ul class="mdl-list">
+						<li class="mdl-list__item mdl-list__item--two-line">
+							<span class="mdl-list__item-primary-content">
+								<a href="https://attwad.github.io/post/material/">(Minimalist) Material Design template for Hugo using Amber templates</a>
+								<span class="mdl-list__item-sub-title">
+									<time datetime="2017-07-09T15:51:10&#43;09:00">Jul 9, 2017</time>
+								</span>
+							</span>
+							<span class="mdl-list__item-secondary-content">
+								<span class="material-icons mdl-badge mdl-badge--overlap" data-badge="3">access_time</span>
+								<span>min. read</span>
+							</span>
+						</li>
+					</ul>
+				</section>
+			</div>			<!-- Footer. -->
+			<footer class="mdl-mini-footer">
+				<div class="mdl-mini-footer__left-section">
+					<div class="mdl-logo">One dad army ・ A few months of ...</div>
+					<ul class="mdl-mini-footer__link-list">
+						<li>
+							<a href="/">Home</a>
+						</li>
+						<li>
+							<a href="//github.com/attwad" target="_blank">
+								<span>Github</span>
+								<i class="material-icons md-18">code</i>
+							</a>
+						</li>
+						<li>
+							<a href="//tmumusic.bandcamp.com" target="_blank">
+								<span>Bandcamp</span>
+								<i class="material-icons md-18">music_note</i>
+							</a>
+						</li>
+						<li>
+							<a href="//www.linkedin.com/in/timothefaudot" target="_blank">
+								<span>Linkedin</span>
+								<i class="material-icons md-18">work</i>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="mdl-mini-footer__right-section">
+					<ul class="mdl-mini-footer__link-list">
+						<li>(ɔ) Timothé Faudot</li>
+						<li>
+							<a href="/sitemap.xml">Sitemap</a>
+						</li>
+						<li>
+							<a href="https://attwad.github.io/index.xml">RSS</a>
+						</li>
+					</ul>
+				</div>
+			</footer>
+		</main>
 	</div>
-	<main class="mdl-layout__content">
-		<div class="page-content" style="margin: 50px;">			<!-- The content goes here in children templates. -->
-			<section>
-				<h4>All posts</h4>
-				<ul class="demo-list-three mdl-list">
-					<li class="mdl-list__item mdl-list__item--three-line">
-						<span class="mdl-list__item-primary-content">
-							<a href="https://attwad.github.io/post/first/">Preparations...</a>
-							<span class="mdl-list__item-secondary-info">
-								<time datetime="2017-06-03T22:24:14&#43;09:00">Jun 3, 2017</time>
-							</span>
-							<span class="mdl-list__item-text-body">Preparing this website&hellip; stay tuned!</span>
-						</span>
-						<span class="mdl-list__item-secondary-content">
-							<span class="material-icons mdl-badge mdl-badge--overlap" data-badge="1">access_time</span>
-						</span>
-					</li>
-					<li class="mdl-list__item mdl-list__item--three-line">
-						<span class="mdl-list__item-primary-content">
-							<a href="https://attwad.github.io/post/">Posts</a>
-							<span class="mdl-list__item-secondary-info">
-								<time datetime="2017-06-03T22:24:14&#43;09:00">Jun 3, 2017</time>
-							</span>
-							<span class="mdl-list__item-text-body"></span>
-						</span>
-						<span class="mdl-list__item-secondary-content">
-							<span class="material-icons mdl-badge mdl-badge--overlap" data-badge="0">access_time</span>
-						</span>
-					</li>
-				</ul>
-			</section>
-		</div>		<!-- Footer. -->
-		<footer class="mdl-mini-footer">
-			<div class="mdl-mini-footer__left-section">
-				<div class="mdl-logo">One dad army</div>
-				<ul class="mdl-mini-footer__link-list">
-					<li>
-						<a href="/">Home</a>
-					</li>
-					<li>
-						<a href="/sitemap.xml">Sitemap</a>
-					</li>
-					<li>
-						<a href="//github.com/attwad" target="_blank">
-							<i class="material-icons md-18">open_in_new</i>
-							<span>Github</span>
-						</a>
-					</li>
-				</ul>
-			</div>
-			<div class="mdl-mini-footer__right-section">
-				<span>© Timothé Faudot</span>
-			</div>
-		</footer>
-	</main>
-</div>
+</body>

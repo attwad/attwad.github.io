@@ -6,18 +6,20 @@
     <description>Recent content in Dev on One dad army</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 03 Jun 2017 22:24:14 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 09 Jul 2017 15:51:10 +0900</lastBuildDate>
     
 	<atom:link href="https://attwad.github.io/tags/dev/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Preparations...</title>
-      <link>https://attwad.github.io/post/first/</link>
-      <pubDate>Sat, 03 Jun 2017 22:24:14 +0900</pubDate>
+      <title>(Minimalist) Material Design template for Hugo using Amber templates</title>
+      <link>https://attwad.github.io/post/material/</link>
+      <pubDate>Sun, 09 Jul 2017 15:51:10 +0900</pubDate>
       
-      <guid>https://attwad.github.io/post/first/</guid>
-      <description>Preparing this website&amp;hellip; stay tuned!</description>
+      <guid>https://attwad.github.io/post/material/</guid>
+      <description>Why a static website? When I decided to build this website, I knew I wanted to use a static website generator that I could put anywhere, preferably on Github pages directly.
+A static website has a number of advantages over dynamic and self-hosted ones:
+ They are blazingly fast They work well for blog-type websites They are more easily secured. Not that I really need it here but that&amp;rsquo;s always something I&amp;rsquo;ll take and care about.</description>
     </item>
     
   </channel>
